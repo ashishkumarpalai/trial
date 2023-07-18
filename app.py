@@ -1,3 +1,5 @@
+import os
+
 from flask import Flask, request, jsonify
 from flask_mysqldb import MySQL
 
@@ -77,5 +79,9 @@ def delete_user(user_id):
 
     return jsonify({'message': 'User deleted successfully'})
 
+# if __name__ == '__main__':
+#     app.run()
+
 if __name__ == '__main__':
-    app.run()
+    port = int(os.environ.get("PORT", 8080))
+    app.run(host='0.0.0.0', port=port)
