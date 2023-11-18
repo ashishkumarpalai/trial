@@ -10,10 +10,12 @@ app.config['MYSQL_PASSWORD'] = 'ashish'
 app.config['MYSQL_DB'] = 'giapratice'
 mysql = MySQL(app)
 
+
+
 @app.route('/')
 def home():
-    return 'Welcome to my Flask app!'
-
+    # return 'Welcome to my Flask app!'
+    return '<h1 style="color:blue;text-align:center">Welcome to sql Backend!</h1>'
 # Create a new user
 @app.route('/users', methods=['POST'])
 def create_user():
