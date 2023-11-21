@@ -11,6 +11,7 @@ app.config['MYSQL_DB'] = 'giapratice'
 mysql = MySQL(app)
 
 
+
 @app.route('/')
 def home():
     # return 'Welcome to my Flask app!'
